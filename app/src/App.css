@@ -1,0 +1,47 @@
+.light-background {
+    background-color: rgb(250, 173, 100);
+}
+
+.dark-background {
+    background-color: rgb(6, 1, 66);
+}
+
+.message {
+    color: blue
+}
+
+.div-message {
+    text-align: center;
+}
+
+.no-dots {
+    list-style: none;
+}
+
+.card-body-light {
+    background-color: rgb(184, 128, 76)
+}
+
+.card-body-dark {
+    background-color: rgb(53, 53, 71);
+}
+
+.card-light {
+    background-color: white;
+}
+
+.card-dark {
+    background-color: rgb(59, 59, 70);
+}
+
+.white-text {
+    color: white
+}
+
+.list-light {
+    background-color: rgb(231, 160, 93)
+}
+
+.list-dark {
+    background-color: rgb(52, 53, 102)
+}
