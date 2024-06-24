@@ -1,13 +1,12 @@
-import React from 'react'
+import { memo } from 'react'
 import { useSelector } from 'react-redux'
 
-function PokemonList({formKey, name, numForms, forms, img}) {
-    const selectMode = state => state.mode
-    const mode = useSelector(selectMode)
+export const PokemonCard = memo(function PokemonCard({formKey, name, numForms, forms, img}) {
+    const mode = useSelector(state => state.mode)
     return (
-        <div className={"card border border-dark " + (mode ? "card-light" : "card-dark")} style={{width: '15rem', height: '100%'}}>
-            <img src={img} alt={"pokemon" + name} className="card-img-top"></img>
-            <div className={"card-body " + (mode ? "card-body-light" : "card-body-dark")}>
+        <div className="pokemon-card">
+            <img src={img} alt={"pokemon " + name} className="pokemon-img"></img>
+            <div className={"card-body p-3"}>
                 <h5 className={"card-title " + (mode ? null : 'white-text')}>{name}</h5>
                 <p className={"card-text "  + (mode ? null : 'white-text')}>Количество форм: {numForms}, а именно:</p>
                 <ul>
@@ -18,7 +17,5 @@ function PokemonList({formKey, name, numForms, forms, img}) {
             </div>
             
         </div>
-    );
-}
-
-export const Pokemon = React.memo(PokemonList)
+    )
+})
